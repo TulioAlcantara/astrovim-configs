@@ -1,3 +1,12 @@
+-- Force Node >14
+vim.env.NEOVIM_NODE_VERSION = '18.13.0'
+if vim.fn.has('unix') and vim.env.NEOVIM_NODE_VERSION then
+  local node_dir = vim.env.HOME .. '/.asdf/installs/nodejs/' .. vim.env.NEOVIM_NODE_VERSION .. '/bin/'
+  if (vim.fn.isdirectory(node_dir)) then
+    vim.env.PATH = node_dir .. ':' .. vim.env.PATH
+  end
+end  
+
 -- WSL clipboard
 vim.opt.clipboard = "unnamedplus"
 if vim.fn.has('wsl') == 1 then
