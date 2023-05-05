@@ -5,7 +5,7 @@ if vim.fn.has('unix') and vim.env.NEOVIM_NODE_VERSION then
   if (vim.fn.isdirectory(node_dir)) then
     vim.env.PATH = node_dir .. ':' .. vim.env.PATH
   end
-end  
+end
 
 -- WSL clipboard
 vim.opt.clipboard = "unnamedplus"
@@ -17,6 +17,9 @@ if vim.fn.has('wsl') == 1 then
     end,
   })
 end
+
+-- Use CRLF line endings
+vim.opt.fileformats = { "dos" }
 
 return {
   -- Configure AstroNvim updates
@@ -37,7 +40,7 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "catppuccin",
+  colorscheme = "catppuccin-macchiato",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,

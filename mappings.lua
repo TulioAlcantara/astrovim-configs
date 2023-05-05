@@ -26,7 +26,9 @@ return {
     -- custom mappings
     ["<S-h>"] = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end },
     ["<S-l>"] = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end },
-    -- ["<C->"] = { "<cmd>ToggleTerm<cr>" }
+  },
+  i = {
+    ["<C-s>"] = { "<Esc>:w!<cr>", desc = "Save File" },
   },
   t = {
     -- setting a mapping to false will disable it

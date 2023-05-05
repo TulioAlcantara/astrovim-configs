@@ -6,4 +6,8 @@ return {
 
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
+  { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.color.twilight-nvim" },
 }
